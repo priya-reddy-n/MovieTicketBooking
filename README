@@ -1,0 +1,22 @@
+Environment Setup:
+1] Download latest version of Node JS exe and install it. If mac or linux system follow the steps from Node J site for installation.
+2] Open a terminal or CMD, run npm install -g @angular/cli
+3] Install Mongo Compass exe
+4] Install VSCode
+
+STEPS TO RUN APPLICAITON:
+1] Extract both Backend and UI project zip and rar files in separate folders
+2] Open the folders in VSCode
+3] In UI project, open terminal, run pm install --force [force is important since it will install peer dependicies]
+4] Aftert the installtion is complete run ng serve
+5] In Backend project, open termail, run nm install
+6] After the installation is complete, run pm start
+7] It will connect to Database and display the message
+
+POPULATING DATA
+1] After backend is started, open a broswer tab and run http://localhost:8000/insert/movie
+2] Only After the above URL return "Movie Details Inserted Successfully"
+3] Run http://localhost:8000/insert/daterange
+4] It should return "Date Range details created Successfully"
+
+Now open the URL http://localhost:4200 in browser and Register and Login to continue with the application
