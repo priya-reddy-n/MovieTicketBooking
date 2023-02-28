@@ -1,0 +1,521 @@
+[{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d649c"
+  },
+  "theatreName": "Fox Theatre",
+  "screenCount": 4,
+  "screenId": 1,
+  "screenName": "Screen 1",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d648c"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "12.25",
+  "isCancellationAvailable": "YES",
+  "location": "Atlanta",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233174"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233174"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d649d"
+  },
+  "theatreName": "Fox Theatre",
+  "screenCount": 4,
+  "screenId": 2,
+  "screenName": "Screen 2",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d648f"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "15.75",
+  "isCancellationAvailable": "NO",
+  "location": "Atlanta",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233174"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233174"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d649e"
+  },
+  "theatreName": "Fox Theatre",
+  "screenCount": 4,
+  "screenId": 3,
+  "screenName": "Screen 3",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d6489"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "11.3",
+  "isCancellationAvailable": "YES",
+  "location": "Atlanta",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233174"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233174"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d649f"
+  },
+  "theatreName": "Fox Theatre",
+  "screenCount": 4,
+  "screenId": 4,
+  "screenName": "Screen 4",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d648d"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "12.5",
+  "isCancellationAvailable": "YES",
+  "location": "Atlanta",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233174"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233174"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d64a0"
+  },
+  "theatreName": "The Capitol Theatre",
+  "screenCount": 3,
+  "screenId": 1,
+  "screenName": "Screen 1",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d648e"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "14.85",
+  "isCancellationAvailable": "NO",
+  "location": "Flint",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233174"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233174"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d64a1"
+  },
+  "theatreName": "The Capitol Theatre",
+  "screenCount": 3,
+  "screenId": 2,
+  "screenName": "Screen 2",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d648a"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "15.45",
+  "isCancellationAvailable": "YES",
+  "location": "Flint",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d64a4"
+  },
+  "theatreName": "Virginia Theatre",
+  "screenCount": 3,
+  "screenId": 2,
+  "screenName": "Screen 2",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d648c"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "15.75",
+  "isCancellationAvailable": "YES",
+  "location": "Illinois",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d64a5"
+  },
+  "theatreName": "Virginia Theatre",
+  "screenCount": 3,
+  "screenId": 3,
+  "screenName": "Screen 3",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d648f"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "10.95",
+  "isCancellationAvailable": "NO",
+  "location": "Illinois",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d64a6"
+  },
+  "theatreName": "Carnegie Hall",
+  "screenCount": 4,
+  "screenId": 1,
+  "screenName": "Screen 1",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d6489"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "14.85",
+  "isCancellationAvailable": "YES",
+  "location": "New York",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d64a7"
+  },
+  "theatreName": "Carnegie Hall",
+  "screenCount": 4,
+  "screenId": 2,
+  "screenName": "Screen 2",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d648d"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "12.65",
+  "isCancellationAvailable": "YES",
+  "location": "New York",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d64a8"
+  },
+  "theatreName": "Carnegie Hall",
+  "screenCount": 4,
+  "screenId": 3,
+  "screenName": "Screen 3",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d648e"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "13.74",
+  "isCancellationAvailable": "NO",
+  "location": "New York",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d64a9"
+  },
+  "theatreName": "Carnegie Hall",
+  "screenCount": 4,
+  "screenId": 4,
+  "screenName": "Screen 4",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d648a"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "13.25",
+  "isCancellationAvailable": "YES",
+  "location": "New York",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d64aa"
+  },
+  "theatreName": "Music Box Theatre",
+  "screenCount": 4,
+  "screenId": 1,
+  "screenName": "Screen 1",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d648b"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "11.56",
+  "isCancellationAvailable": "NO",
+  "location": "Chicago",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d64ab"
+  },
+  "theatreName": "Music Box Theatre",
+  "screenCount": 4,
+  "screenId": 2,
+  "screenName": "Screen 2",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d6490"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "12.23",
+  "isCancellationAvailable": "NO",
+  "location": "Chicago",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d64ac"
+  },
+  "theatreName": "Music Box Theatre",
+  "screenCount": 4,
+  "screenId": 3,
+  "screenName": "Screen 3",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d648c"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "11.99",
+  "isCancellationAvailable": "YES",
+  "location": "Chicago",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d64ad"
+  },
+  "theatreName": "Music Box Theatre",
+  "screenCount": 4,
+  "screenId": 4,
+  "screenName": "Screen 4",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d648f"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "15.45",
+  "isCancellationAvailable": "NO",
+  "location": "Chicago",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d64ae"
+  },
+  "theatreName": "Los Angeles Theatre",
+  "screenCount": 2,
+  "screenId": 1,
+  "screenName": "Screen 1",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d6489"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "12.89",
+  "isCancellationAvailable": "YES",
+  "location": "Los Angeles",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d64af"
+  },
+  "theatreName": "Los Angeles Theatre",
+  "screenCount": 2,
+  "screenId": 2,
+  "screenName": "Screen 2",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d648d"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "15.89",
+  "isCancellationAvailable": "YES",
+  "location": "Los Angeles",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d64a2"
+  },
+  "theatreName": "The Capitol Theatre",
+  "screenCount": 3,
+  "screenId": 3,
+  "screenName": "Screen 3",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d648b"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "9.15",
+  "isCancellationAvailable": "NO",
+  "location": "Flint",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37ce1fcf71e62c72d64a3"
+  },
+  "theatreName": "Virginia Theatre",
+  "screenCount": 3,
+  "screenId": 1,
+  "screenName": "Screen 1",
+  "movieId": {
+    "$oid": "62d37cdffcf71e62c72d6490"
+  },
+  "tickets": "[{\"time\": \"10.00\", \"count\": 180}, {\"time\": \"13.00\", \"count\": 180}, {\"time\": \"16.00\", \"count\": 180}, {\"time\": \"19.00\", \"count\": 180}]",
+  "ticketAmount": "18.45",
+  "isCancellationAvailable": "NO",
+  "location": "Illinois",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027233175"
+    }
+  },
+  "__v": 0
+}]

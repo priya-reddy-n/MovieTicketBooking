@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Movie</title>
+</head>
+<body>
+    <form>
+        <label for="movieName">Movie Name:</label><br>
+        <input type="text" id="movieName" name="movieName"><br>
+        <label for="movieGenre">Movie Genre:</label><br>
+        <input type="text" id="movieGenre" name="movieGenre"><br>
+        <label for="plot">Plot:</label><br>
+        <input type="text" id="plot" name="plot"><br>
+        <label for="castDetails">Cast Details:</label><br>
+        <input type="text" id="castDetails" name="castDetails"><br>
+        <label for="ratings">Ratings:</label><br>
+        <input type="text" id="ratings" name="ratings"><br>
+        <label for="runTime">Run Time:</label><br>
+        <input type="text" id="runTime" name="runTime"><br>
+        <label for="releaseDate">Release Date:</label><br>
+        <input type="text" id="releaseDate" name="releaseDate"><br>
+        <label for="lastShowDate">Last Show Date:</label><br>
+        <input type="text" id="lastShowDate" name="lastShowDate"><br>
+        <label for="posterName">Poster Name:</label><br>
+        <input type="text" id="posterName" name="posterName"><br><br>
+        <button type="submit" onclick="sendData()">Create Movie</button>
+    </form>
+    <script>
+        function sendData() {
+            const formData = new FormData(document.querySelector("form"));
+            const json = JSON.stringify(Object.fromEntries(formData.entries()));
+
+            fetch("http://localhost:8000/create/movie", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: json
+            });
+
+            return false;
+        }
+    </script>
+</body>
+</html>

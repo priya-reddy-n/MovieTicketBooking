@@ -1,0 +1,44 @@
+.movie-poster {
+  min-height: 10rem;
+  object-fit: cover;
+  background-color: lightblue;
+  border-radius: 10px;
+}
+
+.movie-name-div {
+  margin-top: 1rem;
+}
+
+.date-time-div {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.seat-details-div {
+  display: grid;
+  grid-template-columns: 32% 23% 45%;
+  margin-top: 1rem;
+}
+
+.payment-mode {
+  margin-top: 1rem;
+}
+
+.confirm-pay-button {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.steps-content {
+  padding: 1rem;
+}
+
+.confirm-card-title {
+  font-size: 15px;
+}
+
+.confirm-card-content {
+  font-size: 18px;
+}

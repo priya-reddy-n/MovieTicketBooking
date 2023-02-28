@@ -1,0 +1,515 @@
+<div>
+  <app-nav-bar></app-nav-bar>
+  <div
+    *ngIf="theatreDetails && theatreDetails.length > 0 && !isPastLastDate"
+    class="theatre-container"
+  >
+    <div class="movie-details-container">
+      <nz-card class="movie-details-card">
+        <div class="movie-details-card-body">
+          <h4 nz-typography>{{ selectedMovieDetails.movieName }}</h4>
+          <div
+            style="display: flex; gap: 0.5rem; height: 3rem; margin-top: -1rem"
+          >
+            <h5 nz-typography style="margin-top: 20px">Release Date :</h5>
+            <h4 nz-typography style="display: flex; align-self: center">
+              {{ getReleaseDate(selectedMovieDetails.releaseDate) }}
+            </h4>
+          </div>
+          <div
+            style="display: flex; gap: 0.5rem; height: 3rem; margin-top: -1rem"
+          >
+            <h5 nz-typography style="margin-top: 20px">Last Show Date :</h5>
+            <h4 nz-typography style="display: flex; align-self: center">
+              {{ getReleaseDate(selectedMovieDetails.lastShowDate) }}
+            </h4>
+          </div>
+          <div
+            style="display: flex; gap: 0.5rem; height: 3rem; margin-top: -1rem"
+          >
+            <h5 nz-typography style="margin-top: 20px">Ratings :</h5>
+            <h4 nz-typography style="display: flex; align-self: center">
+              {{ selectedMovieDetails.ratings }}
+            </h4>
+          </div>
+        </div>
+      </nz-card>
+    </div>
+    <div class="theatre-card">
+      <div>
+        <div *ngFor="let theat of theatreDetails">
+          <nz-card
+            nzHoverable
+            class="card-container"
+            (click)="handleTheatreClick(theat._id)"
+          >
+            <nz-list nzSize="small">
+              <nz-list-item>
+                <ng-container>
+                  <nz-list-item-meta>
+                    <nz-list-item-meta-title class="list-meta-div">
+                      <nz-avatar
+                        class="list-meta-icon"
+                        nzIcon="play-circle"
+                      ></nz-avatar>
+                      <h4 nz-typography>{{ theat.theatreName }}</h4>
+                    </nz-list-item-meta-title>
+                  </nz-list-item-meta>
+                </ng-container>
+              </nz-list-item>
+              <nz-list-item>
+                <ng-container>
+                  <nz-list-item-meta>
+                    <nz-list-item-meta-title class="list-meta-div">
+                      <nz-avatar
+                        class="list-meta-icon"
+                        nzIcon="link"
+                      ></nz-avatar>
+                      <h5 nz-typography>Location</h5>
+                    </nz-list-item-meta-title>
+                  </nz-list-item-meta>
+                  <div class="meta-div">
+                    <h5 nz-typography>{{ theat.location }}</h5>
+                  </div>
+                </ng-container>
+              </nz-list-item>
+              <nz-list-item>
+                <ng-container>
+                  <nz-list-item-meta>
+                    <nz-list-item-meta-title class="list-meta-div">
+                      <nz-avatar
+                        class="list-meta-icon"
+                        nzIcon="profile"
+                      ></nz-avatar>
+                      <h5 nz-typography>Screens Count</h5>
+                    </nz-list-item-meta-title>
+                  </nz-list-item-meta>
+                  <nz-avatar
+                    [nzShape]="'circle'"
+                    [nzSize]="30"
+                    [nzText]="theat.screenCount"
+                    style="
+                      vertical-align: middle;
+                      background-color: #1890ff;
+                      font-size: large;
+                      font-weight: 800;
+                      margin-left: 1rem;
+                    "
+                  ></nz-avatar>
+                  <ul nz-list-item-actions></ul>
+                </ng-container>
+              </nz-list-item>
+              <nz-list-item>
+                <ng-container>
+                  <nz-list-item-meta>
+                    <nz-list-item-meta-title class="list-meta-div">
+                      <nz-avatar
+                        class="list-meta-icon"
+                        nzIcon="fund-projection-screen"
+                      ></nz-avatar>
+                      <h5 nz-typography>Screen Name</h5>
+                    </nz-list-item-meta-title>
+                  </nz-list-item-meta>
+                  <div class="meta-div">
+                    <nz-tag
+                      class="meta-text"
+                      [nzColor]="'#108ee9'"
+                      style="vertical-align: middle"
+                      >{{ theat.screenName }}</nz-tag
+                    >
+                  </div>
+                </ng-container>
+              </nz-list-item>
+              <nz-list-item>
+                <ng-container>
+                  <nz-list-item-meta>
+                    <nz-list-item-meta-title class="list-meta-div">
+                      <nz-avatar
+                        class="list-meta-icon"
+                        nzIcon="api"
+                      ></nz-avatar>
+                      <h5 nz-typography>Is Cancellation Available</h5>
+                    </nz-list-item-meta-title>
+                  </nz-list-item-meta>
+                  <div class="meta-div">
+                    <nz-tag
+                      *ngIf="theat.isCancellationAvailable === 'YES'"
+                      nzColor="success"
+                      style="
+                        width: 5rem;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                      "
+                    >
+                      <i nz-icon nzType="check-circle"></i>
+                      <span style="font-weight: 600; font-size: 14px">{{
+                        theat.isCancellationAvailable
+                      }}</span>
+                    </nz-tag>
+                    <nz-tag
+                      *ngIf="theat.isCancellationAvailable === 'NO'"
+                      nzColor="error"
+                      style="
+                        width: 5rem;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                      "
+                    >
+                      <i nz-icon nzType="exclamation-circle"></i>
+                      <span style="font-weight: 600; font-size: 14px">{{
+                        theat.isCancellationAvailable
+                      }}</span>
+                    </nz-tag>
+                  </div>
+                </ng-container>
+              </nz-list-item>
+            </nz-list>
+          </nz-card>
+        </div>
+      </div>
+
+      <!-- Payment, timing and tickets select div -->
+
+      <div class="booking-payment-details">
+        <nz-card nzHoverable class="card-container">
+          <h3 nz-typography>{{ selectedTheatreName }}</h3>
+          <h4 nz-typography style="margin-top: -10px">{{ location }}</h4>
+          <div class="date-picker-div">
+            <h3 style="margin-top: 8px; font-size: 18px">Choose Movie Date</h3>
+            <nz-date-picker
+              [nzAllowClear]="false"
+              class="date-picker-comp"
+              [(ngModel)]="movieDate"
+              (ngModelChange)="onMovieDateChange($event)"
+            ></nz-date-picker>
+          </div>
+          <div class="timing-details-div">
+            <h3 style="margin-top: 8px; font-size: 18px">
+              Choose Movie Timing
+            </h3>
+            <div *ngFor="let timings of timingKeys">
+              <button
+                nz-button
+                id="{{ timings }}"
+                [nzSize]="'large'"
+                nzType="default"
+                style="margin-top: 0.3rem"
+                (click)="handleTimingChange(timings)"
+                [style]="{
+                  'background-color':
+                    selectedTiming === timings ? '#1890ff' : 'white',
+                  color: selectedTiming === timings ? 'white' : 'black'
+                }"
+              >
+                {{ timings }}
+              </button>
+            </div>
+            <div *ngIf="!timingKeys || timingKeys.length === 0">
+              <h5 nz-typography style="margin-top: 12px; margin-left: 1rem">
+                Choose a valid date
+              </h5>
+            </div>
+          </div>
+          <div class="tickets-count-div">
+            <h3 style="margin-top: 8px; font-size: 18px">Available Tickets</h3>
+            <h3 style="margin-top: 8px; font-size: 18px">
+              {{ availableTickets }}
+            </h3>
+          </div>
+
+          <!-- Tickets count and total calc -->
+          <div class="">
+            <div class="sub-title-div">
+              <h3
+                nz-typography
+                style="
+                  font-size: large;
+                  color: lightseagreen;
+                  padding: 0.2rem;
+                  border: 1px solid lightseagreen;
+                  border-radius: 20px;
+                  justify-content: center;
+                  align-items: center;
+                  vertical-align: middle;
+                  display: flex;
+                "
+              >
+                TICKETS SECTION
+              </h3>
+            </div>
+            <div class="tickets-selector">
+              <h3 style="margin-top: 8px; font-size: 18px">
+                Select No of Tickets
+              </h3>
+              <div class="ticket-count-select-div">
+                <div *ngFor="let item of ticketsCount">
+                  <button
+                    nz-button
+                    nzType="default"
+                    [nzSize]="'large'"
+                    (click)="handleCountChange(item)"
+                    [style]="{
+                      'background-color':
+                        selectedTicketCount === item ? '#1890ff' : 'white',
+                      color: selectedTicketCount === item ? 'white' : 'black'
+                    }"
+                  >
+                    {{ item }}
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="ticket-list-div">
+              <nz-list nzSize="small">
+                <nz-list-item class="ticket-list-item">
+                  <ng-container>
+                    <nz-list-item-meta>
+                      <nz-list-item-meta-title class="list-meta-div">
+                        <nz-avatar
+                          class="list-meta-icon"
+                          nzIcon="up-circle"
+                          style="margin-top: 4px"
+                        ></nz-avatar>
+                        <h3 style="margin-top: 8px; font-size: 18px">
+                          Total Tickets Count
+                        </h3>
+                      </nz-list-item-meta-title>
+                    </nz-list-item-meta>
+                    <h3>{{ selectedTicketCount }}</h3>
+                  </ng-container>
+                </nz-list-item>
+                <nz-list-item class="ticket-list-item">
+                  <ng-container>
+                    <nz-list-item-meta>
+                      <nz-list-item-meta-title class="list-meta-div">
+                        <nz-avatar
+                          class="list-meta-icon"
+                          nzIcon="share-alt"
+                          style="margin-top: 4px"
+                        ></nz-avatar>
+                        <h3 style="margin-top: 8px; font-size: 18px">
+                          Price per Ticket
+                        </h3>
+                      </nz-list-item-meta-title>
+                    </nz-list-item-meta>
+                    <h3>{{ "$" + selectedTicketPrice }}</h3>
+                  </ng-container>
+                </nz-list-item>
+                <nz-list-item class="ticket-list-item">
+                  <ng-container>
+                    <nz-list-item-meta>
+                      <nz-list-item-meta-title class="list-meta-div">
+                        <nz-avatar
+                          class="list-meta-icon"
+                          nzIcon="copyright-circle"
+                          style="margin-top: 4px"
+                        ></nz-avatar>
+                        <h3 style="margin-top: 8px; font-size: 18px">
+                          Price of Selected Tickets
+                        </h3>
+                      </nz-list-item-meta-title>
+                    </nz-list-item-meta>
+                    <h3>{{ "$" + multipliedPrice }}</h3>
+                  </ng-container>
+                </nz-list-item>
+                <nz-list-item class="ticket-list-item">
+                  <ng-container>
+                    <nz-list-item-meta>
+                      <nz-list-item-meta-title class="list-meta-div">
+                        <nz-avatar
+                          class="list-meta-icon"
+                          nzIcon="tool"
+                          style="margin-top: 4px"
+                        ></nz-avatar>
+                        <h3 style="margin-top: 8px; font-size: 18px">
+                          Booking & Other Charges
+                        </h3>
+                      </nz-list-item-meta-title>
+                    </nz-list-item-meta>
+                    <h3>{{ "$" + additionalPrice }}</h3>
+                  </ng-container>
+                </nz-list-item>
+                <nz-list-item class="ticket-list-item">
+                  <ng-container>
+                    <nz-list-item-meta>
+                      <nz-list-item-meta-title class="list-meta-div">
+                        <nz-avatar
+                          class="list-meta-icon"
+                          nzIcon="dollar"
+                          style="margin-top: 4px"
+                        ></nz-avatar>
+                        <h4 nz-typography style="margin-top: 4px">
+                          Total Price
+                        </h4>
+                      </nz-list-item-meta-title>
+                    </nz-list-item-meta>
+                    <h4 nz-typography>{{ totalPrice }}</h4>
+                  </ng-container>
+                </nz-list-item>
+              </nz-list>
+            </div>
+          </div>
+
+          <!-- Payment portal -->
+          <div class="payment-portal">
+            <div class="sub-title-div">
+              <h3
+                nz-typography
+                style="
+                  font-size: large;
+                  color: lightseagreen;
+                  padding: 0.2rem;
+                  border: 1px solid lightseagreen;
+                  border-radius: 20px;
+                  justify-content: center;
+                  align-items: center;
+                  vertical-align: middle;
+                  display: flex;
+                "
+              >
+                PAYMENT SECTION
+              </h3>
+            </div>
+            <h3 style="margin-top: 8px; font-size: 18px">
+              Switch between Payment Options
+            </h3>
+            <nz-tabset (nzSelectChange)="handleTabChange($event)">
+              <!-- <nz-tab nzTitle="UPI">
+                <div class="upi-div">
+                  <h3 style="margin-top: 8px; font-size: 18px">Enter UPI ID</h3>
+                  <input
+                    nz-input
+                    placeholder="user@upi"
+                    nzSize="default"
+                    style="width: 15rem"
+                  />
+                </div>
+                <button
+                  nz-button
+                  nzType="primary"
+                  [nzSize]="'large'"
+                  style="border-radius: 10px; font-size: 16px; font-weight: 600"
+                  class="payment-button"
+                  (click)="handlePayment()"
+                >
+                  Confirm and Continue
+                  <i nz-icon nzType="right"></i>
+                </button>
+              </nz-tab> -->
+              <nz-tab nzTitle="Debit / Credit Card" style="margin-bottom: 2rem">
+                <div class="card-div">
+                  <nz-radio-group
+                    class="radio-group-div"
+                    (ngModelChange)="handlePaymenCardChange($event)"
+                    [(ngModel)]="paymentCardType"
+                  >
+                    <label nz-radio nzValue="debit"
+                      ><h5 nz-typography>Debit Card</h5></label
+                    >
+                    <label nz-radio nzValue="credit" style="margin-top: 1rem">
+                      <h5 nz-typography>Credit Card</h5></label
+                    >
+                  </nz-radio-group>
+                  <nz-card nzHoverable class="payment-card-div">
+                    <h5 nz-typography>Card Number</h5>
+                    <input
+                      nz-input
+                      placeholder="**** **** **** ****"
+                      nzSize="large"
+                      style="width: 15rem; border-radius: 10px"
+                    />
+                    <h5 nz-typography class="card-headers">Cardholder Name</h5>
+                    <input
+                      nz-input
+                      placeholder="Sai Manjith"
+                      nzSize="large"
+                      style="width: 15rem; border-radius: 10px"
+                    />
+                    <div>
+                      <h5 nz-typography class="card-headers">
+                        Expiration Month & Year
+                      </h5>
+                      <nz-date-picker
+                        nzMode="month"
+                        nzPlaceHolder="MM/YYYY"
+                        [nzFormat]="'MM/YYYY'"
+                        [(ngModel)]="expirationDate"
+                        style="width: 15rem; border-radius: 10px"
+                      ></nz-date-picker>
+                      <h5 nz-typography class="card-headers">Security Code</h5>
+                      <input
+                        nz-input
+                        placeholder="CVV"
+                        nzSize="large"
+                        style="width: 15rem; border-radius: 10px"
+                      />
+                    </div>
+                  </nz-card>
+                </div>
+                <button
+                  nz-button
+                  nzType="primary"
+                  [nzSize]="'large'"
+                  style="border-radius: 10px; font-size: 16px; font-weight: 600"
+                  class="payment-button"
+                  (click)="handlePayment()"
+                >
+                  Confirm and Continue
+                  <i nz-icon nzType="right"></i>
+                </button>
+              </nz-tab>
+            </nz-tabset>
+          </div>
+        </nz-card>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="isPastLastDate">
+    <div class="movie-details-container">
+      <nz-card class="movie-details-card">
+        <div class="movie-details-card-body">
+          <h4 nz-typography>{{ selectedMovieDetails.movieName }}</h4>
+          <div
+            style="display: flex; gap: 0.5rem; height: 3rem; margin-top: -1rem"
+          >
+            <h5 nz-typography style="margin-top: 20px">Release Date :</h5>
+            <h4 nz-typography style="display: flex; align-self: center">
+              {{ getReleaseDate(selectedMovieDetails.releaseDate) }}
+            </h4>
+          </div>
+          <div
+            style="display: flex; gap: 0.5rem; height: 3rem; margin-top: -1rem"
+          >
+            <h5 nz-typography style="margin-top: 20px">Last Show Date :</h5>
+            <h4 nz-typography style="display: flex; align-self: center">
+              {{ getReleaseDate(selectedMovieDetails.lastShowDate) }}
+            </h4>
+          </div>
+          <div
+            style="display: flex; gap: 0.5rem; height: 3rem; margin-top: -1rem"
+          >
+            <h5 nz-typography style="margin-top: 20px">Ratings :</h5>
+            <h4 nz-typography style="display: flex; align-self: center">
+              {{ selectedMovieDetails.ratings }}
+            </h4>
+          </div>
+        </div>
+      </nz-card>
+    </div>
+    <nz-result
+      nzStatus="404"
+      nzTitle="Sorry, Last Show Date of the Movie Already Ended"
+    >
+      <div nz-result-extra>
+        <button nz-button nzType="primary" (click)="navigateToMovies()">
+          Back To Movies
+        </button>
+      </div>
+    </nz-result>
+  </div>
+  <div *ngIf="isPaymentConfirmed">
+    <app-confirmation></app-confirmation>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.ant-card-cover {
+  height: 10rem !important;
+}
+
+.ant-card-cover img {
+  height: inherit !important;
+  object-fit: cover !important;
+}
+
+
+.ant-card-body {
+  padding: 12px !important;
+}

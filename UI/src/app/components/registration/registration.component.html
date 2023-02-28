@@ -1,0 +1,157 @@
+<div class="container">
+  <div class="card-component">
+    <div class="welcome-icon">
+      <i
+        nz-icon
+        nzType="dingding"
+        nzTheme="outline"
+        style="font-size: 5rem"
+      ></i>
+      <h2>Welcome To Movie Ticket Booking</h2>
+    </div>
+    <form
+      nz-form
+      [formGroup]="registerForm"
+      class="login-form"
+      (ngSubmit)="submitForm()"
+    >
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="userName"
+          >User Name</nz-form-label
+        >
+        <nz-form-control
+          [nzSm]="14"
+          [nzXs]="24"
+          nzErrorTip="Please input your Username!"
+        >
+          <nz-input-group nzPrefixIcon="user">
+            <input
+              type="text"
+              nz-input
+              formControlName="userName"
+              placeholder="Username"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="password"
+          >Password</nz-form-label
+        >
+        <nz-form-control
+          [nzSm]="14"
+          [nzXs]="24"
+          nzErrorTip="Please input your Password!"
+        >
+          <nz-input-group nzPrefixIcon="lock">
+            <input
+              type="password"
+              nz-input
+              formControlName="password"
+              placeholder="Password"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="fullName"
+          >Full Name</nz-form-label
+        >
+        <nz-form-control
+          [nzSm]="14"
+          [nzXs]="24"
+          nzErrorTip="Please input your Fullname!"
+        >
+          <nz-input-group nzPrefixIcon="team">
+            <input
+              type="text"
+              nz-input
+              formControlName="fullName"
+              placeholder="eg: Sai Manjith"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="emailId"
+          >Email ID</nz-form-label
+        >
+        <nz-form-control
+          [nzSm]="14"
+          [nzXs]="24"
+          nzErrorTip="The input is not valid E-mail!"
+        >
+          <nz-input-group nzPrefixIcon="mail">
+            <input
+              type="email"
+              nz-input
+              formControlName="emailId"
+              placeholder="eg: sxm07440@ucmo.edu"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="phoneNumber"
+          >Phone No</nz-form-label
+        >
+        <nz-form-control
+          [nzSm]="14"
+          [nzXs]="24"
+          [nzValidateStatus]="registerForm.controls['phoneNumber']"
+          nzErrorTip="Please input your phone number!"
+        >
+          <nz-input-group nzPrefixIcon="phone">
+            <input
+              type="email"
+              nz-input
+              formControlName="phoneNumber"
+              placeholder="Phone Number"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="location"
+          >Location</nz-form-label
+        >
+        <nz-form-control
+          [nzSm]="14"
+          [nzXs]="24"
+          nzErrorTip="Please input your Location!"
+        >
+          <nz-input-group nzPrefixIcon="compass">
+            <input
+              type="text"
+              nz-input
+              formControlName="location"
+              placeholder="eg: New York"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <div class="login-register-buttons">
+        <button
+          nz-button
+          class="login-form-button"
+          [nzType]="'primary'"
+          type="submit"
+        >
+          REGISTER
+        </button>
+      </div>
+      <div class="secondary-button-group">
+        <h3 class="user-text">Already Registered ?</h3>
+        <button
+          nz-button
+          class="login-form-secondary-button"
+          [nzType]="'default'"
+          type="button"
+          (click)="goToLogin()"
+        >
+          LOGIN
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

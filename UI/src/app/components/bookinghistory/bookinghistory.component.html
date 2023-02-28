@@ -1,0 +1,32 @@
+<div>
+  <app-nav-bar></app-nav-bar>
+  <div class="overall-history-container">
+    <div
+      class="booking-history-container"
+      *ngFor="let bookingDetails of bookingHistory"
+    >
+      <app-booking-history-card
+        [bookingDetails]="bookingDetails"
+        (updateData)="updateData()"
+      ></app-booking-history-card>
+    </div>
+    <div
+      *ngIf="!bookingHistory || bookingHistory.length === 0"
+      style="
+        display: flex;
+        height: 40rem;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      "
+    >
+      <nz-result nzStatus="404" nzTitle="You haven't made any Bookings">
+        <div nz-result-extra>
+          <button nz-button nzType="primary" (click)="navigateToMovies()">
+            Back To Movies
+          </button>
+        </div>
+      </nz-result>
+    </div>
+  </div>
+</div>

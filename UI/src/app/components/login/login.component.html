@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="card-component">
+    <div class="welcome-icon">
+      <i
+        nz-icon
+        nzType="dingding"
+        nzTheme="outline"
+        style="font-size: 5rem"
+      ></i>
+      <h2>Welcome To Movie Ticket Booking</h2>
+    </div>
+    <form
+      nz-form
+      [formGroup]="loginForm"
+      class="login-form"
+      (ngSubmit)="submitForm()"
+    >
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your username!">
+          <nz-input-group nzPrefixIcon="user">
+            <input
+              type="text"
+              nz-input
+              formControlName="userName"
+              placeholder="Username"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your Password!">
+          <nz-input-group nzPrefixIcon="lock">
+            <input
+              type="password"
+              nz-input
+              formControlName="password"
+              placeholder="Password"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <div class="login-register-buttons">
+        <button
+          nz-button
+          class="login-form-button"
+          [nzType]="'primary'"
+          type="submit"
+        >
+          LOGIN
+        </button>
+      </div>
+      <div class="secondary-button-group">
+        <h3 class="user-text">New User ?</h3>
+        <button
+          nz-button
+          class="login-form-secondary-button"
+          [nzType]="'default'"
+          type="button"
+          (click)="goToRegister()"
+        >
+          REGISTER
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div>
+  <app-nav-bar></app-nav-bar>
+  <div class="dashboard-container">
+    <div
+      *ngIf="movieDetails && movieDetails.length > 0"
+      class="location-filter-div"
+    >
+      <nz-card class="filter-card">
+        <div style="display: flex">
+          <h5 nz-typography>Select Location to Filter :</h5>
+          <nz-select
+            [nzShowSearch]="true"
+            ngModel="{{ defaultLocation }}"
+            style="margin-left: 0.5rem"
+            [nzOptions]="this.locationsList"
+            (ngModelChange)="handleLocationChange($event)"
+          >
+          </nz-select>
+        </div>
+      </nz-card>
+    </div>
+    <div
+      *ngIf="movieDetails && movieDetails.length > 0"
+      class="movie-list-container"
+    >
+      <div *ngFor="let movie of movieDetails">
+        <app-moviecard [movieDetails]="movie"></app-moviecard>
+      </div>
+    </div>
+    <div *ngIf="!movieDetails || movieDetails.length === 0">
+      <nz-result
+        nzStatus="info"
+        nzTitle="We Don't have any Movies to show Right now"
+      >
+      </nz-result>
+    </div>
+  </div>
+</div>

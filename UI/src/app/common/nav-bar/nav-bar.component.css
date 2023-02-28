@@ -1,0 +1,25 @@
+.nav-bar-header {
+  background: #fff;
+  height: 100px;
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+}
+
+.back-button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar-title {
+  display: flex;
+  padding: 1.5rem;
+  justify-content: center;
+}
+
+.nav-bar-actions {
+  display: flex;
+  float: right;
+  padding: 1.5rem;
+  justify-content: end;
+}

@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ng-zorro-antd/ng-zorro-antd.min.css";
+
+body ::-webkit-scrollbar {
+  display: none;
+}
+
+.ant-picker-input>input {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.ant-tabs-tab-btn {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ant-result-subtitle {
+  font-size: 16px !important;
+  font-weight: 500;
+}
+
+.ant-select {
+  min-width: 8rem;
+}
+
+.ant-list-item-meta-title {
+  display: flex;
+  gap: 1rem;
+}
+
+.list-meta-icon>.anticon {
+  color: black !important;
+  font-size: 24px !important;
+}
+
+.ant-avatar.ant-avatar-icon {
+  background-color: white;
+}

@@ -1,0 +1,196 @@
+.movie-card-container {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  width: 32rem;
+  height: 40rem;
+  padding: 0.5rem;
+  cursor: default;
+}
+
+.movie-poster {
+  min-height: 10rem;
+  object-fit: cover;
+  background-color: lightblue;
+  border-radius: 10px;
+}
+
+.poster-img {
+  height: 10rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.movie-header {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  justify-content: space-between;
+  height: 4rem;
+  margin-top: 0.5rem;
+}
+
+.movie-rating-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+}
+
+.movie-rating {
+  display: flex;
+  font-size: medium;
+}
+
+.ratingIcon {
+  font-size: medium;
+  margin-top: 5px;
+}
+
+.movie-name {
+  word-wrap: break-word;
+}
+
+.movie-runtime-class {
+  display: flex;
+}
+
+.release-year {
+  margin-left: 0.5rem;
+  font-size: medium;
+}
+
+.runtime {
+  font-size: medium;
+}
+
+.sep-dot {
+  margin-left: 0.5rem;
+  font-size: larger;
+}
+
+.movie-genre {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 0.5rem;
+  height: 2rem;
+  overflow: scroll;
+  padding: 0.5rem;
+}
+
+.movie-genre::-webkit-scrollbar {
+  display: none;
+}
+
+.genre-title {
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 0.8rem;
+  height: 10px;
+  width: auto;
+  margin: 0px 0.3rem;
+  border-radius: 20px;
+  color: grey;
+  font-size: small;
+  font-weight: 400;
+  background: white;
+  display: flex;
+  border: 1px solid gray;
+}
+
+.movie-synopsis {
+  margin-top: 1rem;
+}
+
+.synopsis-content {
+  padding: 0.1rem 1rem;
+  height: 5rem;
+  overflow: scroll;
+}
+
+.synopsis-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* .cast-details::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(42, 168, 241, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.cast-details::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+  background-color: #F5F5F5;
+}
+
+.cast-details::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(85, 133, 235, 0.3);
+  background-color: #1890ff;
+} */
+
+.cast-details::-webkit-scrollbar {
+  display: none;
+}
+
+
+.cast-details {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  flex-direction: column;
+  height: 4rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  gap: 0.6rem;
+  width: 105%;
+}
+
+.cast-details-title {
+  margin-top: 0.5rem;
+}
+
+.cast-title {
+  padding: 0.6rem 0.8rem;
+  /* border: 0.8px solid; */
+  height: auto;
+  width: auto;
+  margin: 0px 0.8rem;
+  border-radius: 20px;
+  color: black;
+  font-weight: 600;
+  background: lightgray;
+  box-shadow: inset;
+}
+
+.cast-name-div {
+  padding: 4px 5px;
+  width: 100%;
+  word-wrap: break-word;
+  margin-left: 1rem;
+  font-size: small;
+  font-weight: 400;
+}
+
+.cast-card {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  height: auto;
+  padding: 0.5rem;
+}
+
+.cast-card>* {
+  flex: 1 1;
+}
+
+.book-ticket-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-ticket-button {
+  margin-top: 1rem;
+}

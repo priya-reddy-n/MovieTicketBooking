@@ -1,0 +1,188 @@
+.theatre-container {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, #7DDFF8 0%, #B1ADE2 100%);
+}
+
+.card-container {
+  /* border: 1px solid black; */
+  border-radius: 30px;
+  margin-bottom: 2rem;
+  /* max-height: 50rem; */
+}
+
+.theatre-card {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  margin: 0px 2rem;
+  padding: 1rem;
+}
+
+.details-div {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  height: 3rem;
+}
+
+.meta-div {
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+}
+
+.meta-text {
+  font-size: medium;
+  font-weight: 600;
+}
+
+.icons-alignment-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.xx-large-icons-div {
+  font-size: xx-large;
+  padding: 5px 1rem;
+}
+
+.large-icons-div {
+  font-size: large;
+  padding-inline-end: 5px 1rem;
+}
+
+.name-div {
+  font-size: 32px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.title-div {
+  font-size: 20px;
+}
+
+.center-align-div {
+  display: flex;
+  align-items: center;
+}
+
+
+.date-picker-div {
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+
+.date-picker-comp {
+  width: 12rem;
+  border-radius: 15px;
+  margin-left: 1rem;
+}
+
+
+.booking-payment-details {
+  margin-left: 1rem;
+  min-height: 50rem;
+}
+
+.timing-details-div {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.sub-title-div {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.tickets-count-div {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.tickets-selector {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.ticket-count-select-div {
+  display: flex;
+  gap: 1rem;
+}
+
+.ticket-list-div {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 60%;
+}
+
+.upi-div {
+  margin-top: 1rem;
+  margin-left: 2rem;
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+
+.payment-button {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+
+.card-div {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+
+.radio-group-div {
+  display: flex;
+  flex-direction: column;
+  line-height: 3rem;
+}
+
+.payment-card-div {
+  width: 35rem;
+  border-radius: 20px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, #7DDFF8 0%, #B1ADE2 100%);
+}
+
+.ticket-list-item {
+  height: 3rem !important;
+}
+
+.card-headers {
+  margin-top: 0.5rem;
+  margin-bottom: -0.5px;
+}
+
+.theatre-name-location-div {
+  margin-top: 1rem;
+}
+
+.movie-details-container {
+  height: 5rem;
+  margin: 2rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.movie-details-card {
+  height: inherit;
+  border-radius: 15px;
+}
+
+.movie-details-card-body {
+  display: flex;
+  gap: 2rem;
+}

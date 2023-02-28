@@ -1,0 +1,87 @@
+<div>
+  <nz-card
+    nzHoverable
+    class="movie-card-container"
+    [nzBodyStyle]="{ 'padding.px': 12 }"
+  >
+    <div class="movie-poster">
+      <img
+        *ngIf="getImageSrc(movieDetails.posterName).length > 0"
+        class="poster-img"
+        src="{{ getImageSrc(movieDetails.posterName) }}"
+      />
+    </div>
+    <div class="movie-header">
+      <h3 class="movie-name" nz-typography>
+        {{ movieDetails.movieName }}
+      </h3>
+      <div class="movie-rating-div">
+        <i
+          nz-icon
+          [nzType]="'star'"
+          [nzTheme]="'twotone'"
+          [nzTwotoneColor]="'#FFD700'"
+          class="ratingIcon"
+        ></i>
+        <h2 class="movie-rating">{{ movieDetails.ratings }} / 10</h2>
+      </div>
+    </div>
+    <div class="movie-runtime-class">
+      <h3 class="runtime">{{ movieDetails.runTime }}</h3>
+      <h3 class="sep-dot">.</h3>
+      <h3 class="release-year">
+        {{ getReleseYear(movieDetails.releaseDate) }}
+      </h3>
+    </div>
+    <div class="movie-genre">
+      <div *ngFor="let genre of genreList">
+        <div class="genre-title">{{ genre }}</div>
+      </div>
+    </div>
+    <h3 class="cast-details-title">Cast & Crew</h3>
+    <div class="cast-details">
+      <div *ngFor="let cast of castList">
+        <div class="cast-card">
+          <nz-avatar
+            [nzShape]="'circle'"
+            [nzSize]="56"
+            [nzText]="getCastInitial(cast)"
+            style="
+              vertical-align: middle;
+              background-color: #1890ff;
+              font-size: large;
+            "
+          ></nz-avatar>
+          <div class="cast-name-div">
+            <h3>{{ cast }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="movie-synopsis">
+      <h3 class="synopsis-title">Plot summary</h3>
+      <h4 class="synopsis-content">
+        {{ movieDetails.plot }}
+      </h4>
+    </div>
+    <div class="book-ticket-div">
+      <button
+        nz-button
+        nzType="primary"
+        [nzSize]="'large'"
+        nzShape="round"
+        class="book-ticket-button"
+        (click)="routeToTheatre(movieDetails._id)"
+      >
+        <i nz-icon nzType="dingding"></i>
+        BOOK TIKCETS
+      </button>
+    </div>
+  </nz-card>
+  <ng-template #coverTemplate>
+    <img
+      alt="example"
+      src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+    />
+  </ng-template>
+</div>

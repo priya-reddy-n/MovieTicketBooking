@@ -1,0 +1,53 @@
+<div>
+  <div class="nav-bar-header" nz-row nz-col nzSpan="24">
+    <div *ngIf="checkIfDashboard()"></div>
+    <div *ngIf="!checkIfDashboard()" class="back-button-div">
+      <button
+        nz-button
+        nzType="primary"
+        [nzSize]="'large'"
+        nzShape="circle"
+        (click)="navigateToMovies()"
+      >
+        <i nz-icon nzType="left"></i>
+      </button>
+      <h4 nz-typography style="margin-left: 10px; margin-top: 5px">
+        To Movies
+      </h4>
+    </div>
+    <div class="nav-bar-title">
+      <i
+        nz-icon
+        nzType="dingding"
+        nzTheme="outline"
+        style="background-color: white; color: black; font-size: 48px"
+      ></i>
+      <h2 nz-typography style="margin-left: 10px">
+        Movie Ticket Booking System
+      </h2>
+    </div>
+    <div class="nav-bar-actions">
+      <button
+        nz-button
+        [nzSize]="'large'"
+        nzType="primary"
+        nzGhost
+        style="margin-right: 1rem"
+        (click)="navigateToBookingHistory()"
+        *ngIf="!checkIfHistory()"
+      >
+        Booking History
+      </button>
+      <button
+        nz-button
+        [nzSize]="'large'"
+        nzType="default"
+        nzDanger
+        style="margin-right: 2rem"
+        (click)="handleLogout()"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+</div>

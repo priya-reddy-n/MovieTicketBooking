@@ -1,0 +1,127 @@
+<div>
+  <nz-card
+    nzHoverable
+    class="history-card-container"
+    [nzBodyStyle]="{ 'padding.px': 12 }"
+  >
+    <div class="movie-poster">
+      <img
+        style="object-fit: cover; height: 10rem; width: 100%"
+        *ngIf="getImageSrc(posterName).length > 0"
+        class="poster-img"
+        src="{{ getImageSrc(posterName) }}"
+      />
+    </div>
+    <div style="display: flex; margin-top: 1rem; margin-bottom: -10px">
+      <h5 class="confirm-card-title" style="margin-top: 3px"># Ticket ID</h5>
+      <h5 nz-typography class="confirm-card-content" style="margin-left: 10px">
+        {{ ticketID }}
+      </h5>
+    </div>
+    <div class="movie-name-div">
+      <h4 nz-typography style="font-size: 24px">
+        {{ movieName || "" }}
+      </h4>
+    </div>
+    <div class="theatre-status-div">
+      <div class="theatre-name-location-div">
+        <h4 nz-typography>{{ theatreName || "" }}</h4>
+        <h5 nz-typography style="margin-top: -10px">
+          {{ location || "" }}
+        </h5>
+      </div>
+      <div class="booking-status-div">
+        <div *ngIf="ticketStatus && ticketStatus === 'Booked'">
+          <nz-tag [nzColor]="'green'" class="status-tag">BOOKED</nz-tag>
+        </div>
+        <div *ngIf="ticketStatus && ticketStatus === 'Cancelled'">
+          <nz-tag [nzColor]="'red'" class="status-tag">CANCELLED</nz-tag>
+        </div>
+      </div>
+    </div>
+    <div class="date-time-div">
+      <div>
+        <h5 class="confirm-card-title">Show Date</h5>
+        <h5 nz-typography class="confirm-card-content">{{ movieDate }}</h5>
+      </div>
+      <div>
+        <h5 class="confirm-card-title">Show Time</h5>
+        <h5 nz-typography class="confirm-card-content">{{ movieTime }}</h5>
+      </div>
+    </div>
+    <div class="seat-details-div">
+      <div>
+        <h5 class="confirm-card-title">Screen Name</h5>
+        <h5 nz-typography class="confirm-card-content">{{ screenName }}</h5>
+      </div>
+      <div>
+        <h5 class="confirm-card-title">Row Name</h5>
+        <h5 nz-typography class="confirm-card-content">{{ rowNumber }}</h5>
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          margin-left: auto;
+          align-items: flex-end;
+        "
+      >
+        <h5 class="confirm-card-title">Seat Number(s)</h5>
+        <h5
+          nz-typography
+          class="confirm-card-content"
+          style="
+            width: 13rem;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: flex-end;
+          "
+        >
+          {{ seatListString || "" }}
+        </h5>
+      </div>
+    </div>
+    <div class="seat-details-div">
+      <div>
+        <h5 class="confirm-card-title">Movie Screen</h5>
+        <h5 nz-typography class="confirm-card-content">3D</h5>
+      </div>
+      <div style="display: flex; flex-direction: column">
+        <h5 class="confirm-card-title">Price</h5>
+        <h5 nz-typography class="confirm-card-content">{{ totalPrice }}</h5>
+      </div>
+      <div class="payment-mode">
+        <h5 class="confirm-card-title">Payment Mode</h5>
+        <h5 nz-typography class="confirm-card-content">{{ paymentMode }}</h5>
+      </div>
+    </div>
+    <div class="confirm-pay-button" *ngIf="showCancellationButton()">
+      <button
+        nz-button
+        nzType="default"
+        nzDanger
+        [nzSize]="'large'"
+        style="border-radius: 10px; font-size: 16px; font-weight: 600"
+        class="payment-button"
+        (click)="handleTicketCancellation()"
+      >
+        Cancel Booking
+        <i nz-icon nzType="right"></i>
+      </button>
+    </div>
+    <div
+      *ngIf="!isCancellationAvailable"
+      style="margin-top: 1rem; display: flex; justify-content: center"
+    >
+      <h4 nz-typography style="color: #2db7f5">
+        Sorry ! Cancellation not available
+      </h4>
+    </div>
+    <div
+      *ngIf="ticketStatus && ticketStatus === 'Cancelled'"
+      style="margin-top: 1rem; display: flex; justify-content: center"
+    >
+      <h4 nz-typography style="color: #2db7f5">Ticket already Cancelled</h4>
+    </div>
+  </nz-card>
+</div>

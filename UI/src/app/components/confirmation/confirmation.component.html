@@ -1,0 +1,142 @@
+<div>
+  <nz-modal
+    [(nzVisible)]="isVisibleMiddle"
+    nzTitle="Booking Confirmation"
+    nzCentered
+    (nzOnCancel)="handleCancel()"
+    nzMaskClosable="false"
+    [nzOkText]="null"
+    [nzCancelText]="isCancelButtonVisible ? 'Cancel Booking' : null"
+    [nzClosable]="isClosableButtonVisible"
+    [nzContent]="booking"
+    okButtonProps="'style': { display: 'none' }"
+  >
+    <ng-template #booking>
+      <nz-steps [nzCurrent]="currentStep">
+        <nz-step
+          nzTitle="Booking & Payment Details"
+          [nzPercentage]="percentage"
+        ></nz-step>
+        <nz-step nzTitle="Booking Confirmed"></nz-step>
+      </nz-steps>
+      <div class="steps-content" *ngIf="currentStep === 0">
+        <div class="movie-poster">
+          <img
+            style="object-fit: cover; height: 10rem; width: 100%"
+            *ngIf="getImageSrc(posterName).length > 0"
+            class="poster-img"
+            src="{{ getImageSrc(posterName) }}"
+          />
+        </div>
+        <div class="movie-name-div">
+          <h4 nz-typography style="font-size: 24px">
+            {{ selectedMovieDetails.movieName || "" }}
+          </h4>
+        </div>
+        <div class="theatre-name-location-div">
+          <h4 nz-typography>{{ movieTheatreDetails.theatreName || "" }}</h4>
+          <h5 nz-typography style="margin-top: -10px">
+            {{ movieTheatreDetails.location || "" }}
+          </h5>
+        </div>
+        <div class="date-time-div">
+          <div>
+            <h5 class="confirm-card-title">Show Date</h5>
+            <h5 nz-typography class="confirm-card-content">{{ movieDate }}</h5>
+          </div>
+          <div>
+            <h5 class="confirm-card-title">Show Time</h5>
+            <h5 nz-typography class="confirm-card-content">{{ movieTime }}</h5>
+          </div>
+        </div>
+        <div class="seat-details-div">
+          <div>
+            <h5 class="confirm-card-title">Screen Name</h5>
+            <h5 nz-typography class="confirm-card-content">{{ screenName }}</h5>
+          </div>
+          <div>
+            <h5 class="confirm-card-title">Row Name</h5>
+            <h5 nz-typography class="confirm-card-content">{{ rowNumber }}</h5>
+          </div>
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              margin-left: auto;
+              align-items: flex-end;
+            "
+          >
+            <h5 class="confirm-card-title">Seat Number(s)</h5>
+            <h5
+              nz-typography
+              class="confirm-card-content"
+              style="
+                width: 13rem;
+                flex-wrap: wrap;
+                display: flex;
+                justify-content: flex-end;
+              "
+            >
+              {{ seatListString || "" }}
+            </h5>
+          </div>
+        </div>
+        <div class="seat-details-div">
+          <div>
+            <h5 class="confirm-card-title">Ticket ID</h5>
+            <h5 nz-typography class="confirm-card-content">{{ ticketID }}</h5>
+          </div>
+          <div>
+            <h5 class="confirm-card-title">Movie Screen</h5>
+            <h5 nz-typography class="confirm-card-content">3D</h5>
+          </div>
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              margin-left: auto;
+              align-items: flex-end;
+            "
+          >
+            <h5 class="confirm-card-title">Price</h5>
+            <h5 nz-typography class="confirm-card-content">{{ totalPrice }}</h5>
+          </div>
+        </div>
+        <div class="payment-mode">
+          <h5 class="confirm-card-title">Payment Mode</h5>
+          <h5 nz-typography class="confirm-card-content">{{ paymentMode }}</h5>
+        </div>
+        <div class="confirm-pay-button">
+          <button
+            nz-button
+            nzType="primary"
+            [nzSize]="'large'"
+            style="border-radius: 10px; font-size: 16px; font-weight: 600"
+            class="payment-button"
+            (click)="handleConfirmBooking()"
+            [disabled]="isConfirmButtonDisabled"
+          >
+            Confirm Booking
+            <i nz-icon nzType="right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="steps-content" *ngIf="currentStep === 1">
+        <nz-result
+          nzStatus="success"
+          nzTitle="Ticket Booked Successfully"
+          nzSubTitle="Ticket ID : {{ ticketID }}"
+        >
+          <div nz-result-extra>
+            <button nz-button nzType="primary" (click)="goToMovies()">
+              Go To Movies
+            </button>
+            <button nz-button (click)="goToBookingHistory()">
+              Booking History
+            </button>
+          </div>
+        </nz-result>
+      </div>
+    </ng-template>
+  </nz-modal>
+</div>

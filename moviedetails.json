@@ -1,0 +1,313 @@
+[{
+  "_id": {
+    "$oid": "62d37cdffcf71e62c72d6489"
+  },
+  "movieName": "Doctor Strange in the Multiverse of Madness",
+  "movieGenre": [
+    "Superhero",
+    "Horror"
+  ],
+  "plot": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores\n        exercitationem in aspernatur recusandae eius ipsam laboriosam voluptas\n        natus repellendus quaerat! Lorem ipsum dolor sit, amet consectetur\n        adipisicing elit. Veritatis repellendus error ad rem animi delectus.\n        Nulla, possimus saepe iure fugiat sint excepturi, ratione nesciunt\n        obcaecati ullam quidem eligendi molestiae cum aspernatur eaque. Amet\n        ratione magni natus perferendis consequuntur voluptate error quos minus,\n        assumenda at qui esse recusandae, alias deserunt similique veritatis\n        enim praesentium harum accusamus. Iusto sed alias reiciendis veniam, est\n        porro numquam velit natus quo neque accusamus, expedita dolore et modi\n        quia, sint dolores voluptas sapiente repellendus error nobis animi\n        deleniti accusantium quisquam? Sunt hic quisquam provident saepe iste\n        numquam illum, quam delectus officia aperiam ipsa ab. Hic, dicta?",
+  "castDetails": [
+    "Benedict Cumberbatch",
+    "Elizabeth Olsen",
+    "Chiwetel Ejiofor",
+    "Benedict Wong"
+  ],
+  "ratings": "7.1",
+  "runTime": "2h 6m",
+  "releaseDate": {
+    "$date": {
+      "$numberLong": "1651795200000"
+    }
+  },
+  "lastShowDate": {
+    "$date": {
+      "$numberLong": "1653955200000"
+    }
+  },
+  "posterName": "drstrange",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027231130"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027231130"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37cdffcf71e62c72d648a"
+  },
+  "movieName": "Uncharted",
+  "movieGenre": [
+    "Adventure",
+    "Action"
+  ],
+  "plot": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores\n        exercitationem in aspernatur recusandae eius ipsam laboriosam voluptas\n        natus repellendus quaerat! Lorem ipsum dolor sit, amet consectetur\n        adipisicing elit. Veritatis repellendus error ad rem animi delectus.\n        Nulla, possimus saepe iure fugiat sint excepturi, ratione nesciunt\n        obcaecati ullam quidem eligendi molestiae cum aspernatur eaque. Amet\n        ratione magni natus perferendis consequuntur voluptate error quos minus,\n        assumenda at qui esse recusandae, alias deserunt similique veritatis\n        enim praesentium harum accusamus. Iusto sed alias reiciendis veniam, est\n        porro numquam velit natus quo neque accusamus, expedita dolore et modi\n        quia, sint dolores voluptas sapiente repellendus error nobis animi\n        deleniti accusantium quisquam? Sunt hic quisquam provident saepe iste\n        numquam illum, quam delectus officia aperiam ipsa ab. Hic, dicta?",
+  "castDetails": [
+    "Tom Holland",
+    "Mark Wahlberg",
+    "Sophia Taylor Ali"
+  ],
+  "ratings": "7.5",
+  "runTime": "1h 56m",
+  "releaseDate": {
+    "$date": {
+      "$numberLong": "1658966400000"
+    }
+  },
+  "lastShowDate": {
+    "$date": {
+      "$numberLong": "1661126400000"
+    }
+  },
+  "posterName": "uncharted",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027231130"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027231130"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37cdffcf71e62c72d648b"
+  },
+  "movieName": "Fantastic Beasts: The Secrets of Dumbledore",
+  "movieGenre": [
+    "Fantasy",
+    "Action"
+  ],
+  "plot": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores\n        exercitationem in aspernatur recusandae eius ipsam laboriosam voluptas\n        natus repellendus quaerat! Lorem ipsum dolor sit, amet consectetur\n        adipisicing elit. Veritatis repellendus error ad rem animi delectus.\n        Nulla, possimus saepe iure fugiat sint excepturi, ratione nesciunt\n        obcaecati ullam quidem eligendi molestiae cum aspernatur eaque. Amet\n        ratione magni natus perferendis consequuntur voluptate error quos minus,\n        assumenda at qui esse recusandae, alias deserunt similique veritatis\n        enim praesentium harum accusamus. Iusto sed alias reiciendis veniam, est\n        porro numquam velit natus quo neque accusamus, expedita dolore et modi\n        quia, sint dolores voluptas sapiente repellendus error nobis animi\n        deleniti accusantium quisquam? Sunt hic quisquam provident saepe iste\n        numquam illum, quam delectus officia aperiam ipsa ab. Hic, dicta?",
+  "castDetails": [
+    "Mads Mikkelsen",
+    "Eddie Redmayne",
+    "Katherine Waterston"
+  ],
+  "ratings": "6.9",
+  "runTime": "2h 23m",
+  "releaseDate": {
+    "$date": {
+      "$numberLong": "1654646400000"
+    }
+  },
+  "lastShowDate": {
+    "$date": {
+      "$numberLong": "1656806400000"
+    }
+  },
+  "posterName": "fantasticbeast",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027231130"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027231130"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37cdffcf71e62c72d648c"
+  },
+  "movieName": "Tom and Jerry",
+  "movieGenre": [
+    "Kids"
+  ],
+  "plot": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores\n        exercitationem in aspernatur recusandae eius ipsam laboriosam voluptas\n        natus repellendus quaerat! Lorem ipsum dolor sit, amet consectetur\n        adipisicing elit. Veritatis repellendus error ad rem animi delectus.\n        Nulla, possimus saepe iure fugiat sint excepturi, ratione nesciunt\n        obcaecati ullam quidem eligendi molestiae cum aspernatur eaque. Amet\n        ratione magni natus perferendis consequuntur voluptate error quos minus,\n        assumenda at qui esse recusandae, alias deserunt similique veritatis\n        enim praesentium harum accusamus. Iusto sed alias reiciendis veniam, est\n        porro numquam velit natus quo neque accusamus, expedita dolore et modi\n        quia, sint dolores voluptas sapiente repellendus error nobis animi\n        deleniti accusantium quisquam? Sunt hic quisquam provident saepe iste\n        numquam illum, quam delectus officia aperiam ipsa ab. Hic, dicta?",
+  "castDetails": [
+    "Chloë Grace Moretz",
+    "Mel Blanc",
+    "June Foray"
+  ],
+  "ratings": "8.1",
+  "runTime": "1h 41m",
+  "releaseDate": {
+    "$date": {
+      "$numberLong": "1653523200000"
+    }
+  },
+  "lastShowDate": {
+    "$date": {
+      "$numberLong": "1655683200000"
+    }
+  },
+  "posterName": "tomjerry",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027231130"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027231130"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37cdffcf71e62c72d648f"
+  },
+  "movieName": "Spider-Man: No Way Home",
+  "movieGenre": [
+    "Superhero",
+    "Action"
+  ],
+  "plot": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores\n        exercitationem in aspernatur recusandae eius ipsam laboriosam voluptas\n        natus repellendus quaerat! Lorem ipsum dolor sit, amet consectetur\n        adipisicing elit. Veritatis repellendus error ad rem animi delectus.\n        Nulla, possimus saepe iure fugiat sint excepturi, ratione nesciunt\n        obcaecati ullam quidem eligendi molestiae cum aspernatur eaque. Amet\n        ratione magni natus perferendis consequuntur voluptate error quos minus,\n        assumenda at qui esse recusandae, alias deserunt similique veritatis\n        enim praesentium harum accusamus. Iusto sed alias reiciendis veniam, est\n        porro numquam velit natus quo neque accusamus, expedita dolore et modi\n        quia, sint dolores voluptas sapiente repellendus error nobis animi\n        deleniti accusantium quisquam? Sunt hic quisquam provident saepe iste\n        numquam illum, quam delectus officia aperiam ipsa ab. Hic, dicta?",
+  "castDetails": [
+    "Tom Holland",
+    "Andrew Garfield",
+    "Tobey Maguire"
+  ],
+  "ratings": "8.3",
+  "runTime": "2h 28m",
+  "releaseDate": {
+    "$date": {
+      "$numberLong": "1658275200000"
+    }
+  },
+  "lastShowDate": {
+    "$date": {
+      "$numberLong": "1660435200000"
+    }
+  },
+  "posterName": "nowayhome",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027231131"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027231131"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37cdffcf71e62c72d6490"
+  },
+  "movieName": "Free Guy",
+  "movieGenre": [
+    "Comedy",
+    "Action"
+  ],
+  "plot": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores\n        exercitationem in aspernatur recusandae eius ipsam laboriosam voluptas\n        natus repellendus quaerat! Lorem ipsum dolor sit, amet consectetur\n        adipisicing elit. Veritatis repellendus error ad rem animi delectus.\n        Nulla, possimus saepe iure fugiat sint excepturi, ratione nesciunt\n        obcaecati ullam quidem eligendi molestiae cum aspernatur eaque. Amet\n        ratione magni natus perferendis consequuntur voluptate error quos minus,\n        assumenda at qui esse recusandae, alias deserunt similique veritatis\n        enim praesentium harum accusamus. Iusto sed alias reiciendis veniam, est\n        porro numquam velit natus quo neque accusamus, expedita dolore et modi\n        quia, sint dolores voluptas sapiente repellendus error nobis animi\n        deleniti accusantium quisquam? Sunt hic quisquam provident saepe iste\n        numquam illum, quam delectus officia aperiam ipsa ab. Hic, dicta?",
+  "castDetails": [
+    "Ryan Reynolds",
+    "Joe Keery",
+    "Jodie Comer"
+  ],
+  "ratings": "7.1",
+  "runTime": "1h 55m",
+  "releaseDate": {
+    "$date": {
+      "$numberLong": "1660348800000"
+    }
+  },
+  "lastShowDate": {
+    "$date": {
+      "$numberLong": "1662508800000"
+    }
+  },
+  "posterName": "freeguy",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027231131"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027231131"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37cdffcf71e62c72d648d"
+  },
+  "movieName": "The Adam Project",
+  "movieGenre": [
+    "Drama",
+    "Action"
+  ],
+  "plot": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores\n        exercitationem in aspernatur recusandae eius ipsam laboriosam voluptas\n        natus repellendus quaerat! Lorem ipsum dolor sit, amet consectetur\n        adipisicing elit. Veritatis repellendus error ad rem animi delectus.\n        Nulla, possimus saepe iure fugiat sint excepturi, ratione nesciunt\n        obcaecati ullam quidem eligendi molestiae cum aspernatur eaque. Amet\n        ratione magni natus perferendis consequuntur voluptate error quos minus,\n        assumenda at qui esse recusandae, alias deserunt similique veritatis\n        enim praesentium harum accusamus. Iusto sed alias reiciendis veniam, est\n        porro numquam velit natus quo neque accusamus, expedita dolore et modi\n        quia, sint dolores voluptas sapiente repellendus error nobis animi\n        deleniti accusantium quisquam? Sunt hic quisquam provident saepe iste\n        numquam illum, quam delectus officia aperiam ipsa ab. Hic, dicta?",
+  "castDetails": [
+    "Ryan Reynolds",
+    "Walker Scobell",
+    "Zoe Saldaña"
+  ],
+  "ratings": "6.7",
+  "runTime": "1h 46m",
+  "releaseDate": {
+    "$date": {
+      "$numberLong": "1646179200000"
+    }
+  },
+  "lastShowDate": {
+    "$date": {
+      "$numberLong": "1648339200000"
+    }
+  },
+  "posterName": "adamproject",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027231131"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027231131"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d37cdffcf71e62c72d648e"
+  },
+  "movieName": "Sonic the Hedgehog 2",
+  "movieGenre": [
+    "Animation",
+    "Action"
+  ],
+  "plot": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores\n        exercitationem in aspernatur recusandae eius ipsam laboriosam voluptas\n        natus repellendus quaerat! Lorem ipsum dolor sit, amet consectetur\n        adipisicing elit. Veritatis repellendus error ad rem animi delectus.\n        Nulla, possimus saepe iure fugiat sint excepturi, ratione nesciunt\n        obcaecati ullam quidem eligendi molestiae cum aspernatur eaque. Amet\n        ratione magni natus perferendis consequuntur voluptate error quos minus,\n        assumenda at qui esse recusandae, alias deserunt similique veritatis\n        enim praesentium harum accusamus. Iusto sed alias reiciendis veniam, est\n        porro numquam velit natus quo neque accusamus, expedita dolore et modi\n        quia, sint dolores voluptas sapiente repellendus error nobis animi\n        deleniti accusantium quisquam? Sunt hic quisquam provident saepe iste\n        numquam illum, quam delectus officia aperiam ipsa ab. Hic, dicta?",
+  "castDetails": [
+    "Jim Carrey",
+    "Idris Elba",
+    "Tika Sumpter"
+  ],
+  "ratings": "6.6",
+  "runTime": "2h 2m",
+  "releaseDate": {
+    "$date": {
+      "$numberLong": "1659657600000"
+    }
+  },
+  "lastShowDate": {
+    "$date": {
+      "$numberLong": "1661817600000"
+    }
+  },
+  "posterName": "sonic2",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658027231131"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1658027231131"
+    }
+  },
+  "__v": 0
+}]
